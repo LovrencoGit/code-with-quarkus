@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.acme.dto.enumerations.RolesEnum;
 
 import java.time.LocalDate;
 
@@ -30,5 +31,7 @@ public class DTOUser {
     /**********/
 
     private Integer age;
+
+    private RolesEnum role;
 
 }

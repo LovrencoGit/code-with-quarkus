@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.acme.entity.enumerations.RolesEnum;
 
 import java.time.LocalDate;
 
@@ -29,4 +30,6 @@ public class User {
     private String email;
     private String password;
 
+    @Enumerated(EnumType.STRING)
+    private RolesEnum role;
 }

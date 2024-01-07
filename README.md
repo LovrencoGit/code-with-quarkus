@@ -78,14 +78,13 @@ Easily start your Reactive RESTful Web Services
 [X] UserMediaResource
     - [X] Configuration class -> https://quarkus.io/guides/config-mappings
 [] Authentication -> https://quarkus.io/guides/security-authentication-mechanisms
-    - [X] JWT
-        - https://smallrye.io/docs/smallrye-jwt/generate-jwt.html
-        - https://quarkus.io/guides/security-proactive-authentication
-        - [X] Integrazione con ruoli
-    - [] Mettere password criptata a db
+    - [] JWT 
+    - [] Basic
 ---
 [] cache
 [] UI sulla risorsa (es. /user/ui/12)
+[] Basic Auth
+[] JWT Auth
 [] spring data REST - hateoas
 [] Flyway
 
