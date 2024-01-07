@@ -73,19 +73,17 @@ Easily start your Reactive RESTful Web Services
 [X] LogApiFilter - ContainerRequestFilter, ContainerResponseFilter
 [X] RestClientFilter - ClientRequestFilter, ClientResponseFilter
 [X] MediaResource - upload, download, delete, list
-[X] OpenAPI - swagger (code first e contract first)
+[] OpenAPI - swagger (code first e contract first)
     - https://github.com/quarkiverse/quarkus-openapi-generator
-[X] UserMediaResource
-    - [X] Configuration class -> https://quarkus.io/guides/config-mappings
-[] Authentication -> https://quarkus.io/guides/security-authentication-mechanisms
-    - [X] JWT
-        - https://smallrye.io/docs/smallrye-jwt/generate-jwt.html
-        - https://quarkus.io/guides/security-proactive-authentication
-        - [X] Integrazione con ruoli
-    - [] Mettere password criptata a db
+    - https://docs.quarkiverse.io/quarkus-openapi-generator/dev/index.html
+[] Unit tests
+    - mockito
+[] corrispettivo di Spring security
 ---
 [] cache
 [] UI sulla risorsa (es. /user/ui/12)
+[] Basic Auth
+[] JWT Auth
 [] spring data REST - hateoas
 [] Flyway
 
