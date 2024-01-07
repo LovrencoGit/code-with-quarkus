@@ -1,0 +1,62 @@
+######################
+#####   GLOBAL   #####
+######################
+quarkus.analytics.disabled=false
+
+
+
+
+
+########################
+#####   LOCAL H2   #####    database H2
+########################
+
+%LOCAL_H2.quarkus.http.port=8181
+%LOCAL_H2.quarkus.log.console.level=INFO
+%LOCAL_H2.quarkus.datasource.db-kind=h2
+
+#####################
+#####   LOCAL   #####
+#####################
+
+%LOCAL.quarkus.http.port=8181
+%LOCAL.quarkus.log.console.level=INFO
+%LOCAL.quarkus.datasource.db-kind=postgresql
+%LOCAL.quarkus.datasource.username=username
+%LOCAL.quarkus.datasource.password=password
+%LOCAL.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/my_db
+
+###################
+#####   DEV   #####
+###################
+
+%DEV.quarkus.http.port=8282
+%DEV.quarkus.log.console.level=INFO
+%DEV.quarkus.datasource.db-kind=postgresql
+%DEV.quarkus.datasource.username=username
+%DEV.quarkus.datasource.password=password
+%DEV.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/my_db
+
+####################
+#####   TEST   #####
+####################
+
+%TEST.quarkus.http.port=8383
+%TEST.quarkus.log.console.level=WARN
+%TEST.quarkus.datasource.db-kind=postgresql
+%TEST.quarkus.datasource.username=username
+%TEST.quarkus.datasource.password=password
+%TEST.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/my_db
+%TEST.quarkus.http.access-log.enabled=true
+
+####################
+#####   PROD   #####    This is mainly used for the final package before deployment
+####################
+
+%PROD.quarkus.http.port=8484
+%PROD.quarkus.log.console.level=WARN
+%PROD.quarkus.datasource.db-kind=postgresql
+%PROD.quarkus.datasource.username=username
+%PROD.quarkus.datasource.password=password
+%PROD.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/my_db
+%PROD.quarkus.http.access-log.enabled=true

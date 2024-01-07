@@ -1,0 +1,99 @@
+# code-with-quarkus
+
+This project uses Quarkus, the Supersonic Subatomic Java Framework.
+
+If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+
+## Running the application in dev mode
+
+You can run your application in dev mode that enables live coding using:
+```shell script
+./mvnw compile quarkus:dev
+```
+
+> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+
+## Packaging and running the application
+
+The application can be packaged using:
+```shell script
+./mvnw package
+```
+It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
+Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+
+The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+
+If you want to build an _über-jar_, execute the following command:
+```shell script
+./mvnw package -Dquarkus.package.type=uber-jar
+```
+
+The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+
+## Creating a native executable
+
+You can create a native executable using: 
+```shell script
+./mvnw package -Dnative
+```
+
+Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
+```shell script
+./mvnw package -Dnative -Dquarkus.native.container-build=true
+```
+
+You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
+
+If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
+
+## Provided Code
+
+### RESTEasy Reactive
+
+Easily start your Reactive RESTful Web Services
+
+[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+
+# TRAINING
+
+## to study
+[X] persistance with Panache (basato su Hibernate)
+[X] @Transactional
+[X] lombok
+[X] @RestControllerAdvice
+[X] mupstruct + ADD dtoUser.age (logica su mupstruct)
+[X] env configuration
+[X] @Valid
+[X] RestTemplate | WebClient
+    - https://quarkus.io/guides/rest-client-reactive
+    - https://download.eclipse.org/microprofile/microprofile-rest-client-3.0/microprofile-rest-client-spec-3.0.html
+    - [] vedere gestione custom headers
+[X] LogApiFilter - ContainerRequestFilter, ContainerResponseFilter
+[X] RestClientFilter - ClientRequestFilter, ClientResponseFilter
+[X] MediaResource - upload, download, delete, list
+[X] OpenAPI - swagger (code first e contract first)
+    - https://github.com/quarkiverse/quarkus-openapi-generator
+[X] UserMediaResource
+    - [X] Configuration class -> https://quarkus.io/guides/config-mappings
+[] Authentication -> https://quarkus.io/guides/security-authentication-mechanisms
+    - [X] JWT
+        - https://smallrye.io/docs/smallrye-jwt/generate-jwt.html
+        - https://quarkus.io/guides/security-proactive-authentication
+        - [X] Integrazione con ruoli
+    - [] Mettere password criptata a db
+---
+[] cache
+[] UI sulla risorsa (es. /user/ui/12)
+[] spring data REST - hateoas
+[] Flyway
+
+### link
+- Panache + lombok
+    https://medium.com/@manollo.guedes11/rest-api-using-quarkus-and-panache-79091228c187
+- Lombok + Mapstruct
+    https://developers.redhat.com/articles/2022/02/03/build-rest-api-ground-quarkus-20#project_initialization
+- env configuration
+  https://www.section.io/engineering-education/quarkus-configuration-profiles/
+  https://luizcostatech.medium.com/getting-started-with-quarkus-profile-f5e25435a9b3
